@@ -1,5 +1,3 @@
-# GWC-2015-Final-Project-Shark-Attack-Game-
-<!-- made with github user lalalika july 2015 -->
 <html>
     
     <head>
@@ -37,7 +35,7 @@
                 for (var i = 0; i < 7; i++) { //creates a list of snow drifts
 
                     widthSnow = round(random(200, 300));
-                    //(positionX, positionY, red, green, blue, speed, width, height)
+                    					//(positionX, positionY, red, green, blue, speed, width, height)
                     snowX.push(new Snow(xSnow, 400, 255, 182, 193, 3, widthSnow, random(230, 490)));
                     xSnow = xSnow + widthSnow;
                 }
@@ -59,19 +57,15 @@
                 } //end of for loop
 
 
-                for (var i = 0; i < 3; i++) { //creates a list of raisins
+               for (var i = 0; i < 3; i++) { //creates a list of garbage
 
 
-                    //(positionX, positionY, r, g, b, size, speed)
-                    raisin2 = new Raisin2(xRaisin2, random(75,95), 128, 99, 120, random(15, 25), 3);
-                    raisinList2.push(raisin2);
-                    xRaisin2 = xRaisin2 + 250; //makes raisins appear not on top of each other
+                      //(positionX, positionY, r, g, b, size, speed)
+                      raisin2 = new Raisin2(xRaisin2, random(75,95), 128, 99, 120, random(15, 25), 3);
+                      raisinList2.push(raisin2);
+                      xRaisin2 = xRaisin2 + 250; //makes raisins appear not on top of each other
 
-
-
-
-
-                } //end of for loop
+				} //end of for loop
 
 
             } //setup
@@ -101,15 +95,9 @@
                     if (each_raisin.positionX < -10 && !(each_raisin.size == 0)) {
 
                         each_raisin.positionX = each_raisin.positionX + 1020;
-                        //chinchillaMoved(image1.x);
-                        //chinchillaMoved(image1.y);
+                       
 
-
-
-
-
-
-                    }
+}
                     if (each_raisin.positionX < -10 && (each_raisin.size == 0)) {
 
                         each_raisin.size = random(15, 25);
@@ -150,7 +138,7 @@
 
 
 
-            if (score == 30) {
+            if (score == 100) {
                     noLoop();
                     background(102, 178, 255);
                     hideImage('image1');
@@ -356,7 +344,7 @@
             }
         </script>
         
-        <script src="testMove.js"></script>
+        <script src="movement.js"></script>
         <style>
             body {
                 background-color:#110959
@@ -401,13 +389,13 @@
     
     <body onload="docReady();" onkeydown="" onkeyup="">
         <canvas id="mycanvas" z-index="-1" position="absolute"></canvas>
-        <img id="image5" z-index="1" src="Loser.png" style="position:absolute;left:290; top:10;" height="500" width="550">
-        <img id="image4" z-index="1" src="GERTRUDEmit.png" style="position:absolute;left:490; top:51;" height="100" width="150">
-        <img id="image3" z-index="1" src="GameOver.png" style="position:absolute;left:600; top:100;" height="300" width="300">
-        <img id="image" z-index="1" src="raisin.png" style="position:absolute;left:200; top:100;" height="300" width="300">
-        <img id="image1" z-index="1" src="Chinchilla.png" style="position:absolute;left:150; top:300;" height="100" width="139">
+        <img id="image5" z-index="1" src="https://raw.githubusercontent.com/lalalika/final-project/master/Loser.png" style="position:absolute;left:290; top:10;" height="500" width="550">
+        <img id="image4" z-index="1" src="https://raw.githubusercontent.com/lalalika/final-project/master/GERTRUDEmit.png" style="position:absolute;left:490; top:51;" height="100" width="150">
+        <img id="image3" z-index="1" src="https://raw.githubusercontent.com/lalalika/final-project/master/GameOver.png" style="position:absolute;left:600; top:100;" height="300" width="300">
+        <img id="image" z-index="1" src="https://raw.githubusercontent.com/lalalika/final-project/master/raisin.png" style="position:absolute;left:200; top:100;" height="300" width="300">
+        <img id="image1" z-index="1" src="https://raw.githubusercontent.com/lalalika/final-project/master/Chinchilla.png" style="position:absolute;left:150; top:300;" height="100" width="139">
         <div>
-            <img id="image2" z-index="1" src="GERTRUDE_3.png" style="position:absolute;left:-50; top:300;" height="100" width="150">
+            <img id="image2" z-index="1" src="https://raw.githubusercontent.com/lalalika/final-project/master/GERTRUDE_3.png" style="position:absolute;left:-50; top:300;" height="100" width="150">
         </div>
     </body>
     <p>This is the Shark "Attack" the game! You are the chinchilla. Use the arrow keys to move. The up key jumps. Go right with the right. Go left with the left, but that's kind of unnecessary. No down. 30 raisins equals a victory. Jump to get them. Avoid the shark or you will faint. It will "get" you. Also, avoid the garbage (squares) or you will die after eating 30 pieces!</p>
